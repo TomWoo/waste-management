@@ -36,6 +36,7 @@ $(function() {
     $( "#tags" ).autocomplete({
         source: availableTags
     });
+    $( "#accordion" ).accordion();
 });
 
 function addDataToTable(tableData){
