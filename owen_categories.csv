@@ -1,0 +1,19 @@
+Categories,Weight/Item in grams,weight factor
+Apple,120,1
+Banana,120,1
+Egg,48,1
+Cheetos(one),1,2
+Milk(1L),1000,1.5
+Orange,100,1
+Steak (6 oz),170,1.5
+Disposable Utensils,30,4
+Yogurt per US cup,245,1.8
+Paper,4.5,1.3
+Bottled water,13,5
+Coffee Cups,40,3
+Lunch Box,100,3
+Rice per bowl,75,1
+Noodle per bowl,100,1
+Salmon(4 oz),114,1.8
+Plastic Bags,5.5,5
+Paper Bags,15,2.4
