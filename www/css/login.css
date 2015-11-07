@@ -1,3 +1,7 @@
+a {
+	color: #66FF33;
+}
+
 .login-group {
 	width: 300px;
 	height: 300px;
@@ -5,6 +9,9 @@
 	margin: auto;
 	left:0; right:0;
     top:0; bottom:0;
+
+    color: #66FF33;
+    text-align: center;
 
     background-color: rgba(100, 100, 100, .8);
     border-style: solid;
@@ -18,14 +25,11 @@
 }
 
 .login-logo {
-	color: #66FF33;
-	text-align: center;
 	padding-bottom: 10px;
 }
 
 .login-input {
 	color: #66FF33;
-	text-align: center;
 }
 
 .login-elem {
@@ -37,7 +41,7 @@
 
 .login-btn {
 	border-width: medium;
-	border-radius: 20%;
 	width: 100px;
 	height: 50px;
+	margin-bottom: 10px;
 }
