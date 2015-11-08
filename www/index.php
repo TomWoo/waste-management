@@ -18,7 +18,7 @@
 
             $weight = 0;
             while($row=mysql_fetch_array($entry_list)) {
-                if($id==$$row['id'] and $date_in==$row['date']) {
+                if($id==$row['id'] and $date_in==$row['date']) {
                     $weight = $weight + $row['weight'];
                 }
             }
@@ -26,9 +26,13 @@
         }
         mysql_connect("localhost", "root", "bitnami") or die(mysql_error());
         mysql_select_db("my_database") or die(mysql_error());
-        $names_list = mysql_query("SELECT * FROM names_list") or die(mysql_error());
-        $dates = array($names_list);
-        $weights = array_map("getWeight", $dates);
+        $entry_list = mysql_query("SELECT * FROM entry_list") or die(mysql_error());
+        $dates = array();
+        while($row=mysql_fetch_array($entry_list)) {
+                if($id==$row['id']) {
+                      array_push($dates,$row['date']);
+                  }
+         }
 
         $json_obj = "";
         foreach($dates as $date){
@@ -37,10 +41,9 @@
         }
         $json_obj ="{" . substr($json_obj, 0, strlen($json_obj)-2) . "}";
     ?>
-
     <script type="text/javascript">
         console.log("hello");
-        test = "<?php echo json_encode($json_obj)?>";
+        test = '<?php echo json_encode($json_obj) ?>';
         var arrGraph = JSON.parse(test);
         console.log(arrGraph);
     </script>
