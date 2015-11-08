@@ -42,35 +42,37 @@
 </p>
 
 <div id="tableEntry" style="display:none">
-    <div id="tableForm">
-        <h1 id="category"> Category </h1>
-        <fieldset>
-            Enter amount consumed: <input type="text" id="myText">
-            <label for="units">Select Units</label>
-            <select name="units" id="units">
-                <option>Pounds</option>
-                <option>Grams</option>
-                <option selected="selected">Amount</option>
-            </select>
-            <button onClick="addDataToAddingTable()">Add Item</button>
-        </fieldset>
-    </div>
-    <div>
-        <table class="table table-hover" id="addingTable">
-            <thead>
-            <tr>
-                <th>Waste Item Category</th>
-                <th>Amount Wasted</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-    <div id="submit" align="right">
-        <button class="btn btn-info" onClick="submitTheItemArrayToTable()"> Submit</button>
-    </div>
+    <form action="json_to_entry.php" method="post">
+        <div id="tableForm">
+            <h1 id="category"> Category </h1>
+            <fieldset>
+                Enter amount consumed: <input type="text" id="myText">
+                <label for="units">Select Units</label>
+                <select name="units" id="units">
+                    <option>Pounds</option>
+                    <option>Grams</option>
+                    <option selected="selected">Amount</option>
+                </select>
+                <button onClick="addDataToAddingTable()">Add Item</button>
+            </fieldset>
+        </div>
+        <div>
+            <table class="table table-hover" id="addingTable">
+                <thead>
+                <tr>
+                    <th>Waste Item Category</th>
+                    <th>Amount Wasted</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="submit" align="right">
+            <button class="btn btn-info" type="submit" > Submit</button>
+        </div>
+    </form>
 </div>
 
 <div id="accordion">
