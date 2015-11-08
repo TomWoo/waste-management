@@ -30,7 +30,7 @@ function getArrayOfItems(){
 }
 
 addDataToTable({type:"Fiat", model:500, color:"white"});
-
+var itemArray=[];
 $(function() {
     var availableTags = getArrayOfItems();
     $( "#tags" ).autocomplete({
@@ -38,6 +38,15 @@ $(function() {
     });
     $( "#accordion" ).accordion();
 });
+
+function adjustForm(){
+    //change the category name
+    //change the values to 0
+    document.getElementById('category').innerHTML = document.getElementById('tags').value;
+    document.getElementById("myText").value = 0;
+    document.getElementById("tableEntry").style.display='block';
+
+}
 
 function addDataToTable(tableData){
     var tableRow = document.createElement("TR");
@@ -48,9 +57,35 @@ function addDataToTable(tableData){
             tableD.appendChild(textData);
             tableRow.appendChild(tableD);
         }
-        console.log(tableRow)
     }
     $("#wasteTable tbody").append(tableRow);
+}
+
+function addDataToAddingTable(){
+    var categoryTitle = document.getElementById('category').innerHTML;
+    var amount = document.getElementById("myText").value;
+    item = {cat: categoryTitle, amount: amount, date: getMinutes()};
+    itemArray.push(item);
+    var tableRow = document.createElement("TR");
+    for (var property in item){
+        if (item.hasOwnProperty(property)) {
+            tableD = document.createElement("TD");
+            textData = document.createTextNode(item[property]);
+            tableD.appendChild(textData);
+            tableRow.appendChild(tableD);
+        }
+    }
+    $("#addingTable tbody").append(tableRow);
+}
+
+function getMinutes(){
+    date = new Date();
+    return date.getHours()*60+date.getMinutes();
+}
+
+function submitTheItemArrayToTable(){
+    //sends the data to Tom
+    console.log(itemArray);
 }
 
 // Get context with jQuery - using jQuery's .get() method.
