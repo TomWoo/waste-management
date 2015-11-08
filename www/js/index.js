@@ -55,6 +55,7 @@ function adjustForm(){
 }
 
 function addDataToTable(tableData){
+    console.log(tableData);
     var tableRow = document.createElement("TR");
     for (var property in tableData){
         if (tableData.hasOwnProperty(property)) {
@@ -104,7 +105,7 @@ function submitTheItemArrayToTable(){
 var ctx = $("#chartData").get(0).getContext("2d");
 // This will get the first returned node in the jQuery collection.
 var data = {
-    labels: getDate(),
+    labels: getWeight(),
     datasets: [
         {
             label: "My Second dataset",
@@ -114,7 +115,7 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: getWeight()
+            data: getDate()
         }
     ]
 };
