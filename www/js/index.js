@@ -25,7 +25,16 @@ function getArrayOfItems(){
     ];
 }
 
-addDataToTable({type:"Fiat", model:500, color:"white"});
+addDataToTable(createDateAndWasteObject());
+
+function createDateAndWasteObject(){
+    arrW = getWeight();
+    arrT = getDate();
+    arr = [];
+    for(i=0;i<arrT.length;i++){
+        arr.push({date:arrT[i],weight:arrW[i]});
+    }
+}
 var itemArray=[];
 $(function() {
     var availableTags = getArrayOfItems();
