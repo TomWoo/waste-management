@@ -10,6 +10,7 @@
             exit();
         }
         $name = $_SESSION['name'];
+        $id = $_SESSION['id'];
         function getWeight($date_in) {
             mysql_connect("localhost", "root", "bitnami") or die(mysql_error());
             mysql_select_db("my_database") or die(mysql_error());
@@ -29,6 +30,7 @@
         $entry_list = mysql_query("SELECT * FROM entry_list") or die(mysql_error());
         $dates = array();
         while($row=mysql_fetch_array($entry_list)) {
+//            echo $id .  "<br>";
                 if($id==$row['id']) {
                       array_push($dates,$row['date']);
                   }
