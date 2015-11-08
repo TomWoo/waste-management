@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>WasteManagement</title>
+        <?php
+        if($_SESSION['logged_in']==0)
+            header("Location:http://colab-sbx-221.oit.duke.edu/login.html");
+            exit();
+        ?>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
