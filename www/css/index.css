@@ -1,2 +1,10 @@
 .searchbar {
 }
+
+.ui-accordion-content-active
+{
+    padding: 0 !important;
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}

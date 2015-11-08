@@ -13,7 +13,7 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1 align="center">rEDUce</h1>
+    <h1 align="center">rEDUce Teacher View!</h1>
     <div id ="accordion">
         <h3>Visual Data</h3>
         <div align="center">
@@ -21,12 +21,12 @@
         </div>
         <h3>Table of Students</h3>
         <div>
-            <table class="table table-hover" id="wasteTable">
+            <table class="table table-hover" id="studentTable">
                 <thead>
                 <tr>
-                    <th>Waste Item</th>
+                    <th>Rank</th>
+                    <th>Student Name</th>
                     <th>Amount Wasted</th>
-                    <th>Date</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,6 +34,9 @@
             </table>
         </div>
     </div>
-    <script src="js/index.js"></script>
+    <div id="dialog" title="Basic dialog">
+        <canvas id="studentChart" width="300px" height="300px"></canvas>
+    </div>
+    <script src="js/teacherIndex.js"></script>
 </body>
 </html>
