@@ -53,11 +53,11 @@ function addDataToTable(){
     arrT = getDate();
     for(i=0;i<arrT.length;i++){
             tableD = document.createElement("TD");
-            textData = document.createTextNode(arrT(i));
+            textData = document.createTextNode(arrT[i]);
             tableD.appendChild(textData);
             tableRow.appendChild(tableD);
             tableD = document.createElement("TD");
-            textData = document.createTextNode(arrW(i));
+            textData = document.createTextNode(arrW[i]);
             tableD.appendChild(textData);
             tableRow.appendChild(tableD);
         }
