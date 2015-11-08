@@ -13,7 +13,7 @@
     </script>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script id="test" src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -23,4 +23,3 @@
     <script src="js/scrolling-nav.js"></script>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
