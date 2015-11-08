@@ -4,28 +4,24 @@
 
 function getArrayOfItems(){
     return [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
+        "Apple",
+        "Banana",
+        "Egg",
+        "Cheetos(one)",
+        "Milk(1L)",
+        "Orange",
+        "Steak (6 oz)",
+        "Disposable Utensils",
+        "Yogurt per US cup",
+        "Paper",
+        "Bottled Water",
+        "Coffee Cups",
+        "Lunch Box",
+        "Rice per bowl",
+        "Noodle per bowl",
+        "Salmon(4 oz)",
+        "Plastic Bags",
+        "Paper Bags"
     ];
 }
 
@@ -84,7 +80,14 @@ function getMinutes(){
 }
 
 function submitTheItemArrayToTable(){
-    //sends the data to Tom
+
+        $.ajax({
+            type: 'POST',
+            url: 'json_to_entry.php',
+            data: itemArray,
+            dataType: 'json',
+            async: false
+        });
     console.log(itemArray);
 }
 
