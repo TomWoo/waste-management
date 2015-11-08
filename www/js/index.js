@@ -39,6 +39,7 @@ function adjustForm(){
     //change the category name
     //change the values to 0
     document.getElementById('category').innerHTML = document.getElementById('tags').value;
+    document.getElementById('cat').value = document.getElementById('category').innerHTML;
     document.getElementById("myText").value = 0;
     document.getElementById("tableEntry").style.display='block';
 

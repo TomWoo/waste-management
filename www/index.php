@@ -45,15 +45,16 @@
     <form action="json_to_entry.php" method="post">
         <div id="tableForm">
             <h1 id="category"> Category </h1>
+            <input type="text" id="cat" name="name" value="lols" style="display:none">
             <fieldset>
-                Enter amount consumed: <input type="text" id="myText">
+                Enter amount consumed: <input type="text" id="myText" name="amount">
                 <label for="units">Select Units</label>
                 <select name="units" id="units">
                     <option>Pounds</option>
                     <option>Grams</option>
                     <option selected="selected">Amount</option>
                 </select>
-                <button onClick="addDataToAddingTable()">Add Item</button>
+                <button class="btn btn-primary" onClick="addDataToAddingTable()">Add Item</button>
             </fieldset>
         </div>
         <div>
@@ -69,9 +70,9 @@
                 </tbody>
             </table>
         </div>
-        <div id="submit" align="right">
-            <button class="btn btn-info" type="submit" > Submit</button>
-        </div>
+<!--        <div id="submit" align="right">-->
+<!--            <button class="btn btn-info" type="submit" > Submit</button>-->
+<!--        </div>-->
     </form>
 </div>
 
