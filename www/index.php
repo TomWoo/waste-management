@@ -39,13 +39,14 @@
         $json_obj = "";
         foreach($dates as $date){
             $w = getWeight($date);
-            $json_obj = $json_obj . $date . ":" . $w . ", ";
+            $json_obj = $json_obj . "\"" . $date . "\":" . $w . ", ";
         }
         $json_obj ="{" . substr($json_obj, 0, strlen($json_obj)-2) . "}";
+        echo $json_obj;
     ?>
     <script type="text/javascript">
         console.log("hello");
-        test = '<?php echo json_encode($json_obj) ?>';
+        test = <?php echo json_encode($json_obj) ?>;
         var arrGraph = JSON.parse(test);
         console.log(arrGraph);
     </script>
