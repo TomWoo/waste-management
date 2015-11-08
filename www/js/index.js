@@ -130,7 +130,7 @@ function getDate(){
 function getWeight(){
     arr = [];
     for(var property in arrGraph){
-        if (item.hasOwnProperty(property)) {
+        if (arrGraph.hasOwnProperty(property)) {
             arr.push(arrGraph[property]);
         }
     }
