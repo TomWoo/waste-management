@@ -80,11 +80,10 @@ function getMinutes(){
 }
 
 function submitTheItemArrayToTable(){
-
         $.ajax({
             type: 'POST',
             url: 'json_to_entry.php',
-            data: itemArray,
+            data: {json: JSON.stringify(itemArray)},
             dataType: 'json',
             async: false
         });
