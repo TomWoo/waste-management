@@ -9,11 +9,7 @@
             header("Location:http://colab-sbx-221.oit.duke.edu/login.html");
             exit();
         }
-        ?>
-        <?php
-
         $name = $_SESSION['name'];
-
         function getWeight($date_in) {
             mysql_connect("localhost", "root", "bitnami") or die(mysql_error());
             mysql_select_db("my_database") or die(mysql_error());
@@ -28,19 +24,16 @@
             }
             return $weight;
         }
-
         mysql_connect("localhost", "root", "bitnami") or die(mysql_error());
         mysql_select_db("my_database") or die(mysql_error());
         $names_list = mysql_query("SELECT * FROM names_list") or die(mysql_error());
         $dates = array($names_list);
         $weights = array_map("getWeight", $dates);
-
         $json_obj = '{
             "date":' . $dates .
             ', weight":' . $weights .
         '}';
-
-        ?>
+    ?>
 
     <script>
         console.log("hello");
