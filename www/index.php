@@ -35,10 +35,10 @@
             $w = getWeight($date);
             $json_obj = $json_obj . $date . ":" . $w . ", ";
         }
-        $json_obj ="{ . substr($json_obj, 0, strlen($json_obj)-2) . "}";
+        $json_obj ="{" . substr($json_obj, 0, strlen($json_obj)-2) . "}";
     ?>
 
-    <script>
+    <script type="text/javascript">
         console.log("hello");
         test = "<?php echo json_encode($json_obj)?>";
         var arrGraph = JSON.parse(test);
