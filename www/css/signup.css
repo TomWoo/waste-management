@@ -1,8 +1,8 @@
 a {
-	color: #ffffff;
+	color: #fff;
 }
 
-.login-group {
+.signup-group {
 	width: 300px;
 	height: 300px;
 	position: absolute;
@@ -10,12 +10,12 @@ a {
 	left:0; right:0;
     top:0; bottom:0;
 
-    color: #ffffff;
+    color: #fff;
     text-align: center;
 
     background-color: rgba(100, 100, 100, .8);
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #fff;
     border-width: medium;
     border-radius: 20%;
 
@@ -24,22 +24,22 @@ a {
     overflow:auto;
 }
 
-.login-logo {
+.signup-logo {
 	padding-bottom: 10px;
 }
 
-.login-input {
-	color: #ffffff;
+.signup-input {
+	color: #fff;
 }
 
-.login-elem {
+.signup-elem {
 	background: none;
 	border-style: solid;
-	border-color: #ffffff;
+	border-color: #fff;
 	border-width: thin;
 }
 
-.login-btn {
+.signup-btn {
 	border-width: medium;
 	width: 100px;
 	height: 50px;
