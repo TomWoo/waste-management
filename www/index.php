@@ -29,10 +29,13 @@
         $names_list = mysql_query("SELECT * FROM names_list") or die(mysql_error());
         $dates = array($names_list);
         $weights = array_map("getWeight", $dates);
-        $json_obj = '{
-            "date":' . $dates .
-            ', weight":' . $weights .
-        '}';
+
+        $json_obj = "";
+        foreach($dates as $date){
+            $w = getWeight($date);
+            $json_obj = $json_obj . $date . ":" . $w . ", ";
+        }
+        $json_obj ="{" substr($json_obj, 0, strlen($json_obj)-2) . "}";
     ?>
 
     <script>
