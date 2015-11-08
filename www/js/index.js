@@ -95,7 +95,7 @@ function submitTheItemArrayToTable(){
 var ctx = $("#chartData").get(0).getContext("2d");
 // This will get the first returned node in the jQuery collection.
 var data = {
-    labels: arrGraph['date'],
+    labels: getDate(),
     datasets: [
         {
             label: "My Second dataset",
@@ -105,10 +105,29 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: arrGraph['weight']
+            data: getWeight()
         }
     ]
 };
+
+function getDate(){
+    arr = [];
+    for(var property in arrGraph){
+        arr.push(property);
+    }
+    return arr;
+}
+
+function getWeight(){
+    arr = [];
+    for(var property in arrGraph){
+        if (item.hasOwnProperty(property)) {
+            arr.push(arrGraph[property]);
+        }
+    }
+    return arr;
+}
+
 var myLineChart = new Chart(ctx).Line(data, {
 
     ///Boolean - Whether grid lines are shown across the chart
