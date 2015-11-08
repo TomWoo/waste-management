@@ -48,10 +48,11 @@ function adjustForm(){
 }
 
 function addDataToTable(){
-    var tableRow = document.createElement("TR");
+
     arrW = getWeight();
     arrT = getDate();
     for(i=0;i<arrT.length;i++){
+        var tableRow = document.createElement("TR");
             tableD = document.createElement("TD");
             textData = document.createTextNode(arrT[i]);
             tableD.appendChild(textData);
@@ -60,8 +61,9 @@ function addDataToTable(){
             textData = document.createTextNode(arrW[i]);
             tableD.appendChild(textData);
             tableRow.appendChild(tableD);
+        $("#wasteTable tbody").append(tableRow);
         }
-    $("#wasteTable tbody").append(tableRow);
+
 }
 
 function addDataToAddingTable(){

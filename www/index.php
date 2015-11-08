@@ -42,7 +42,7 @@
             $json_obj = $json_obj . "\"" . $date . "\":" . $w . ", ";
         }
         $json_obj ="{" . substr($json_obj, 0, strlen($json_obj)-2) . "}";
-        echo $json_obj;
+//        echo $json_obj;
     ?>
     <script type="text/javascript">
         console.log("hello");
@@ -124,7 +124,6 @@
         <table class="table table-hover" id="wasteTable">
             <thead>
             <tr>
-                <th>Waste Item</th>
                 <th>Amount Wasted</th>
                 <th>Time</th>
             </tr>
