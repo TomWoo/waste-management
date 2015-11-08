@@ -25,16 +25,9 @@ function getArrayOfItems(){
     ];
 }
 
-addDataToTable(createDateAndWasteObject());
+addDataToTable();
 
-function createDateAndWasteObject(){
-    arrW = getWeight();
-    arrT = getDate();
-    arr = [];
-    for(i=0;i<arrT.length;i++){
-        arr.push({date:arrT[i],weight:arrW[i]});
-    }
-}
+
 var itemArray=[];
 $(function() {
     var availableTags = getArrayOfItems();
@@ -54,17 +47,20 @@ function adjustForm(){
 
 }
 
-function addDataToTable(tableData){
-    console.log(tableData);
+function addDataToTable(){
     var tableRow = document.createElement("TR");
-    for (var property in tableData){
-        if (tableData.hasOwnProperty(property)) {
+    arrW = getWeight();
+    arrT = getDate();
+    for(i=0;i<arrT.length;i++){
             tableD = document.createElement("TD");
-            textData = document.createTextNode(tableData[property]);
+            textData = document.createTextNode(arrT(i));
+            tableD.appendChild(textData);
+            tableRow.appendChild(tableD);
+            tableD = document.createElement("TD");
+            textData = document.createTextNode(arrW(i));
             tableD.appendChild(textData);
             tableRow.appendChild(tableD);
         }
-    }
     $("#wasteTable tbody").append(tableRow);
 }
 
@@ -105,7 +101,7 @@ function submitTheItemArrayToTable(){
 var ctx = $("#chartData").get(0).getContext("2d");
 // This will get the first returned node in the jQuery collection.
 var data = {
-    labels: getWeight(),
+    labels: getDate(),
     datasets: [
         {
             label: "My Second dataset",
@@ -115,7 +111,7 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: getDate()
+            data: getWeight()
         }
     ]
 };
