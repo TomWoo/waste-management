@@ -64,7 +64,7 @@ function addDataToTable(tableData){
 function addDataToAddingTable(){
     var categoryTitle = document.getElementById('category').innerHTML;
     var amount = document.getElementById("myText").value;
-    item = {cat: categoryTitle, amount: amount, date: new Date()};
+    item = {cat: categoryTitle, amount: amount, date: getMinutes()};
     itemArray.push(item);
     var tableRow = document.createElement("TR");
     for (var property in item){
@@ -76,6 +76,11 @@ function addDataToAddingTable(){
         }
     }
     $("#addingTable tbody").append(tableRow);
+}
+
+function getMinutes(){
+    date = new Date();
+    return date.getHours()*60+date.getMinutes();
 }
 
 function submitTheItemArrayToTable(){

@@ -81,7 +81,7 @@
             <tr>
                 <th>Waste Item</th>
                 <th>Amount Wasted</th>
-                <th>Date</th>
+                <th>Time</th>
             </tr>
             </thead>
             <tbody>
