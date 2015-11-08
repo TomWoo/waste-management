@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>WasteManagement</title>
     <?php
-        if($_SESSION['logged_in']==0)
+        session_start();
+        if($_SESSION['logged_in']==0) {
             header("Location:http://colab-sbx-221.oit.duke.edu/login.html");
             exit();
+        }
         ?>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http;//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="js/Chart.js/Chart.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css"/>
