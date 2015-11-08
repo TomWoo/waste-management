@@ -124,6 +124,7 @@ function getDate(){
     for(var property in arrGraph){
         arr.push(property);
     }
+    console.log(arr);
     return arr;
 }
 
@@ -134,6 +135,7 @@ function getWeight(){
             arr.push(arrGraph[property]);
         }
     }
+    console.log(arr);
     return arr;
 }
 
