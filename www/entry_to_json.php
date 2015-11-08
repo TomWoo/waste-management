@@ -27,6 +27,5 @@ $json_obj = '{
     "date":' . $dates .
     ', weight":' . $weights .
 '}';
-echo json_encode($json_obj);
 
 ?>
